@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Orquesta : MonoBehaviour
 {
-    public bool autoIniciar;
-    public Instrumento[] instrumentos;
+    public bool             autoIniciar;
+    public Instrumento[]    instrumentos;
 
 	private void Start()
 	{
