@@ -58,11 +58,13 @@ public class Instrumento
 
     public void Entrar()
     {
-        curva.Entrar();
+        if(curva != null)
+            curva.Entrar();
     }
     public void Salir()
     {
-        curva.Salir();
+        if(curva != null)
+            curva.Salir();
     }
 
 
