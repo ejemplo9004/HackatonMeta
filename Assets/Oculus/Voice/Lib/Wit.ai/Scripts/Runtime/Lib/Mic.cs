@@ -197,7 +197,7 @@ namespace Facebook.WitAi.Lib
 
         private void StartMicrophone()
         {
-            Debug.Log("[Mic] Reserved mic " + CurrentDeviceName);
+            Debug.Log("Microfono: " + CurrentDeviceName);
             AudioClip = Microphone.Start(CurrentDeviceName, true, 1, AudioEncoding.samplerate);
         }
 
@@ -235,7 +235,7 @@ namespace Facebook.WitAi.Lib
                 // Make sure we seek before we start reading data
                 Microphone.GetPosition(CurrentDeviceName);
 
-                Debug.Log("[Mic] Started recording with " + CurrentDeviceName);
+                Debug.Log("Inicia grabación: " + CurrentDeviceName);
                 if (OnStartRecording != null)
                     OnStartRecording.Invoke();
             }

@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/_Game/Scenes/Morion 1.unity
+    guid: 84d682f5de47c1f479d1ccf57d5f4f46
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d896fd12f30315041b26e0c4abc4c164, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 944b47bac0906b145bae748e7dcbe4e8, type: 2}

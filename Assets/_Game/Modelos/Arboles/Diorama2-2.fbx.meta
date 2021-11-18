@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: c015e35017f7cef4fb703bef7d6b972d
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 8344320354798874057
+    second: Plane|Circle.003Action
+  - first:
+      74: -4557658263015835631
+    second: Plane|Empty.001Action
+  - first:
+      74: -8889264871462177601
+    second: Plane|Empty.002Action
+  - first:
+      74: 234281972612569909
+    second: Plane|Empty.003Action
+  - first:
+      74: 1844990704564260251
+    second: Plane|EmptyAction
+  - first:
+      74: 2418431585831821929
+    second: Plane|Plane.001Action
+  - first:
+      74: -3201207233082399036
+    second: Plane|Plane.002Action
+  - first:
+      74: -5187248419258813496
+    second: Plane|PlaneAction
+  - first:
+      74: 3049559128560707056
+    second: Plane.001|Circle.003Action
+  - first:
+      74: 3012255273466464306
+    second: Plane.001|Empty.001Action
+  - first:
+      74: -3092479450801659015
+    second: Plane.001|Empty.002Action
+  - first:
+      74: -8351209703162272368
+    second: Plane.001|Empty.003Action
+  - first:
+      74: 3672153111412007068
+    second: Plane.001|EmptyAction
+  - first:
+      74: -2858551162337178960
+    second: Plane.001|Plane.001Action
+  - first:
+      74: 6855588529536243965
+    second: Plane.001|Plane.002Action
+  - first:
+      74: -2193830699095671242
+    second: Plane.001|PlaneAction
+  - first:
+      74: -3158672049182496575
+    second: Plane.002|Circle.003Action
+  - first:
+      74: 1439371066561374918
+    second: Plane.002|Empty.001Action
+  - first:
+      74: -4361726639115769814
+    second: Plane.002|Empty.002Action
+  - first:
+      74: -6827469610104471288
+    second: Plane.002|Empty.003Action
+  - first:
+      74: -6374423340686751126
+    second: Plane.002|EmptyAction
+  - first:
+      74: 4910038636033323727
+    second: Plane.002|Plane.001Action
+  - first:
+      74: -1177906569688301896
+    second: Plane.002|Plane.002Action
+  - first:
+      74: 2392506347608420488
+    second: Plane.002|PlaneAction
+  - first:
+      74: -4891365001064361813
+    second: Circle.003|Circle.003Action
+  - first:
+      74: 4686657460325932304
+    second: Circle.003|Empty.001Action
+  - first:
+      74: -5382204774059158147
+    second: Circle.003|Empty.002Action
+  - first:
+      74: -7710532190000818250
+    second: Circle.003|Empty.003Action
+  - first:
+      74: -9187022735457549335
+    second: Circle.003|EmptyAction
+  - first:
+      74: -7609385819210061866
+    second: Circle.003|Plane.001Action
+  - first:
+      74: 3918903247301207744
+    second: Circle.003|Plane.002Action
+  - first:
+      74: 984661054725295223
+    second: Circle.003|PlaneAction
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hojas
+    second: {fileID: 2100000, guid: 084e0f9b0cfd32e4a9fc55f307eeaba9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nature
+    second: {fileID: 2100000, guid: fdb2407741b9273489eb460b885b1a7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tronco
+    second: {fileID: 2100000, guid: 9070ea6bd8c8f2a46a76b770165fdf11, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tronco2
+    second: {fileID: 2800000, guid: d50b5e45614bb1f41a1d3fb44fbc37bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: hojas.fw
+    second: {fileID: 2800000, guid: 8790a1703e397e14f8aedd49f04e1cf1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: plantas
+    second: {fileID: 2800000, guid: 22649299efb20a341b620d667388b494, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -23,27 +23,39 @@ public class Orquestador : MonoBehaviour
     void Start()
     {
 		ActualizarUI();
-		Escuchar();
+		Escuchar(5);
     }
 
     public void Evaluar2()
 	{
 		if (orquestas[indice].Evaluar(fraseProvicional))
 		{
-            print("correcto");
+            //print("correcto");
 			txtFraseEscuchada.color = Color.black;
             txtFraseEscuchada.text = ("correcto");
             indice++;
 			ActualizarUI();
-			Escuchar();
+			Escuchar(10);
 		}
 		else
 		{
 			txtFraseEscuchada.color = Color.red;
 			txtFraseEscuchada.text = (fraseProvicional);
+			//Debug.LogError("Error, el texto no es el esperado, supuestamente fue:'" + fraseProvicional + "'");
 			Escuchar();
-			Debug.LogError("Error, el texto no es el esperado, supuestamente fue:'" + fraseProvicional + "'");
 		}
+	}
+
+	public void ErrorEscuchando()
+	{
+		txtFraseEscuchada.color = Color.red;
+		txtFraseEscuchada.text = ("Error trying to listen, try again");
+		Escuchar();
+	}
+
+	public void ImprimirAlerta(string mensa)
+	{
+		//Debug.LogWarning(mensa);
 	}
 
     public void CambiarFrase(string ff)
@@ -61,14 +73,18 @@ public class Orquestador : MonoBehaviour
 
 	public void Escuchar()
 	{
-		StartCoroutine(IniciarEscucha());
+		StartCoroutine(IniciarEscucha(0.5f));
+	}
+	public void Escuchar(int cuanto)
+	{
+		StartCoroutine(IniciarEscucha(cuanto));
 	}
 
-	public IEnumerator IniciarEscucha()
+	public IEnumerator IniciarEscucha(float cuanto)
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(cuanto);
 		audioSource.Play();
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(0.5f);
 		iniciarAudio.Invoke();
 	}
 }
@@ -77,6 +93,7 @@ public class Orquestador : MonoBehaviour
 public class MiniOrquesta
 {
     public string frase;
+	public string[] frasesAlternativas;
     public Orquesta orquesta;
     
     public bool Evaluar(string f)
@@ -85,6 +102,17 @@ public class MiniOrquesta
 		{
             orquesta.Entrar();
             return true;
+		}
+		else
+		{
+			for (int i = 0; i < frasesAlternativas.Length; i++)
+			{
+				if (frasesAlternativas[i].ToUpper().Equals(f.ToUpper()))
+				{
+					orquesta.Entrar();
+					return true;
+				}
+			}
 		}
         return false;
 	}
