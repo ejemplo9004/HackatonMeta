@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
+    path: Assets/_Game/Scenes/Menu.unity
+    guid: e952a64d8d6f21e4099b7f98670e3854
+  - enabled: 1
     path: Assets/_Game/Scenes/Morion 1.unity
     guid: 84d682f5de47c1f479d1ccf57d5f4f46
   m_configObjects:
