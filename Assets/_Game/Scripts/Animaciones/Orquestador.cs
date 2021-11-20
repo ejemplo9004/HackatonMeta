@@ -13,6 +13,8 @@ public class Orquestador : MonoBehaviour
 	public Text txtFraseEscuchada;
 	public UnityEvent iniciarAudio;
 	public AudioSource audioSource;
+	public AudioSource audioSourceEjemplo;
+
 
 	private void Awake()
 	{
@@ -23,27 +25,35 @@ public class Orquestador : MonoBehaviour
     void Start()
     {
 		ActualizarUI();
-		Escuchar(5);
+		//Escuchar(5);
     }
 
     public void Evaluar2()
 	{
+		Controoleano.singleton.Activar("escuchar");
+		Controoleano.singleton.Activar("grabar");
 		if (orquestas[indice].Evaluar(fraseProvicional))
 		{
             //print("correcto");
 			txtFraseEscuchada.color = Color.black;
-            txtFraseEscuchada.text = ("correcto");
+            txtFraseEscuchada.text = ("Perfect!");
             indice++;
-			ActualizarUI();
-			Escuchar(10);
+			Invoke("ActualizarUI",2);
+			//Escuchar(10);
 		}
 		else
 		{
 			txtFraseEscuchada.color = Color.red;
 			txtFraseEscuchada.text = (fraseProvicional);
 			//Debug.LogError("Error, el texto no es el esperado, supuestamente fue:'" + fraseProvicional + "'");
-			Escuchar();
+			//Escuchar();
 		}
+	}
+
+	public void ReproducirEjemplo()
+	{
+		audioSourceEjemplo.clip = orquestas[indice].audioEjemplo;
+		audioSourceEjemplo.Play();
 	}
 
 	public void ErrorEscuchando()
@@ -69,11 +79,17 @@ public class Orquestador : MonoBehaviour
 		{
 			txtFrase.text = orquestas[indice].frase;
 		}
+		else
+		{
+			txtFrase.text = "The End.";
+			Controoleano.singleton.Desactivar("escuchar");
+			Controoleano.singleton.Desactivar("grabar");
+		}
 	}
 
 	public void Escuchar()
 	{
-		StartCoroutine(IniciarEscucha(0.5f));
+		StartCoroutine(IniciarEscucha(0.1f));
 	}
 	public void Escuchar(int cuanto)
 	{
@@ -82,6 +98,8 @@ public class Orquestador : MonoBehaviour
 
 	public IEnumerator IniciarEscucha(float cuanto)
 	{
+		Controoleano.singleton.Desactivar("escuchar");
+		Controoleano.singleton.Desactivar("grabar");
 		yield return new WaitForSeconds(cuanto);
 		audioSource.Play();
 		yield return new WaitForSeconds(0.5f);
@@ -95,6 +113,7 @@ public class MiniOrquesta
     public string frase;
 	public string[] frasesAlternativas;
     public Orquesta orquesta;
+	public AudioClip audioEjemplo;
     
     public bool Evaluar(string f)
 	{
