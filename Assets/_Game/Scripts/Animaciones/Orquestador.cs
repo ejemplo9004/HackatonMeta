@@ -101,6 +101,8 @@ public class Orquestador : MonoBehaviour
 		Controoleano.singleton.Desactivar("escuchar");
 		Controoleano.singleton.Desactivar("grabar");
 		yield return new WaitForSeconds(cuanto);
+		txtFraseEscuchada.color = Color.black;
+		txtFraseEscuchada.text = ("..[ Listening ]..");
 		audioSource.Play();
 		yield return new WaitForSeconds(0.5f);
 		iniciarAudio.Invoke();

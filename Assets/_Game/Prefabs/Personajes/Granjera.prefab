@@ -2982,6 +2982,7 @@ GameObject:
   - component: {fileID: 6178746302915632575}
   - component: {fileID: 5923896502486642084}
   - component: {fileID: 5923896502486642086}
+  - component: {fileID: 146943816025555961}
   m_Layer: 0
   m_Name: Granjera
   m_TagString: Untagged
@@ -3048,6 +3049,22 @@ MonoBehaviour:
   curvaSalida: {fileID: 11400000, guid: 1be8e91d8c0e07e4f941fb8b841bdf04, type: 2}
   autoIniciar: 0
   tiempo: 0.2
+--- !u!114 &146943816025555961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842236301903333125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787aa72c58b2d2840afc52f455c79f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  malla: {fileID: 7039776804207532501}
+  iteraciones: 10
+  pausas: 0.1
+  estado: 0
 --- !u!1 &7067548723627650263
 GameObject:
   m_ObjectHideFlags: 0

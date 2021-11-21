@@ -27,8 +27,8 @@ public class MorionEntrada : MonoBehaviour
 
     IEnumerator Entrando()
 	{
-        float pasos = 1f / 30f;
-		for (int i = 0; i <= 30; i++)
+        float pasos = 1f / 15f;
+		for (int i = 0; i <= 15; i++)
 		{
             transform.localScale = escalaInicial * curvaEntrada.GetPunto(pasos * i);
             yield return new WaitForSeconds(tiempo * pasos);
@@ -45,7 +45,7 @@ public class MorionEntrada : MonoBehaviour
         float pasos = 1f / 30f;
         for (int i = 0; i <= 30; i++)
         {
-            transform.localScale = Vector3.one * curvaSalida.GetPunto(pasos * i);
+            transform.localScale = escalaInicial * curvaSalida.GetPunto(pasos * i);
             yield return new WaitForSeconds(tiempo * pasos);
         }
     }
