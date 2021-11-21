@@ -4374,6 +4374,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a949242750bf0742a30922c981b52d1, type: 3}
+--- !u!1 &808613873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808613874}
+  - component: {fileID: 808613875}
+  m_Layer: 0
+  m_Name: Orquesta (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &808613874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808613873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.47285518, y: 1.1633781, z: 0.7095363}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1734793859}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808613875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808613873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4fed8918d6e65469e9f98bb0f022fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoIniciar: 0
+  instrumentos:
+  - delay0: 0
+    curva: {fileID: 0}
+    delay1: 0
+    evento:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1647393629}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: ResetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Sad
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 140784052}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Sad
+            m_BoolArgument: 0
+          m_CallState: 2
+  - delay0: 0.5
+    curva: {fileID: 908530314}
+    delay1: 0
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &810308825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3147726403421158373, guid: 03e04bc624117d74eb962edcfb28f00c, type: 3}
@@ -9218,6 +9299,7 @@ Transform:
   - {fileID: 1431250831}
   - {fileID: 343519246}
   - {fileID: 771665158}
+  - {fileID: 808613874}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9299,10 +9381,8 @@ MonoBehaviour:
     orquesta: {fileID: 771665159}
     audioEjemplo: {fileID: 8300000, guid: 2ddc377db64334544bb77fde2e3a1feb, type: 3}
   - frase: los granjeros vieron que en su interior
-    frasesAlternativas:
-    - Cubos
-    - eran los cubos
-    orquesta: {fileID: 0}
+    frasesAlternativas: []
+    orquesta: {fileID: 771665159}
     audioEjemplo: {fileID: 8300000, guid: 496733f9558591442a1818bb5b156fed, type: 3}
   - frase: la maravillosa ave era igual a las otras gallinas
     frasesAlternativas:
