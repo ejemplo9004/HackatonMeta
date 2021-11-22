@@ -24,7 +24,7 @@ public class Orquestador : MonoBehaviour
 	int indice = 0;
     void Start()
     {
-		ActualizarUI();
+		StartCoroutine(ActualizarUI());
 		//Escuchar(5);
     }
 
@@ -38,7 +38,7 @@ public class Orquestador : MonoBehaviour
 			txtFraseEscuchada.color = Color.black;
             txtFraseEscuchada.text = ("Perfect!");
             indice++;
-			Invoke("ActualizarUI",2);
+			StartCoroutine(ActualizarUI());
 			//Escuchar(10);
 		}
 		else
@@ -73,11 +73,14 @@ public class Orquestador : MonoBehaviour
         fraseProvicional = ff;
 	}
 
-	void ActualizarUI()
+	IEnumerator ActualizarUI()
 	{
+		yield return new WaitForSeconds(4f);
 		if (indice < orquestas.Length)
 		{
 			txtFrase.text = orquestas[indice].frase;
+			txtFraseEscuchada.color = Color.black;
+			txtFraseEscuchada.text = "[" + orquestas[indice].phrase + "]";
 		}
 		else
 		{
@@ -115,9 +118,10 @@ public class MiniOrquesta
     public string frase;
 	public string[] frasesAlternativas;
     public Orquesta orquesta;
+    public string phrase;
 	public AudioClip audioEjemplo;
-    
-    public bool Evaluar(string f)
+
+	public bool Evaluar(string f)
 	{
 		if (frase.ToUpper().Equals(f.ToUpper()))
 		{
